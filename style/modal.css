@@ -1,0 +1,51 @@
+:root {
+  --primary-color: #5700ff;
+  --modal-duration: 1s;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  color: var(--primary-color);
+  background: white;
+  text-align: center;
+  margin: 5rem auto;
+  width: min(25rem, 90%);
+  border-radius: 0.5rem;
+  padding: 3rem;
+  -webkit-box-shadow: 10px 2px 134px -9px rgba(187, 153, 255, 1);
+  -moz-box-shadow: 10px 2px 134px -9px rgba(187, 153, 255, 1);
+  box-shadow: 10px 2px 134px -9px rgba(187, 153, 255, 1);
+
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-content h1 {
+  /* color: var(--light-color); */
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin-top: 1rem;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

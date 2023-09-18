@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --primary-color: #5700ff;
+  --dark-color: #180c31;
+  --light-color: #bd9bff;
+  --lose-color: #771616;
+  --win-color: #6d1dde;
+  --modal-duration: 1s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Fraunces', serif;
+  line-height: 1.6;
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+
+.container {
+  width: min(68.75rem, 90%);
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.restart-btn {
+  font-family: 'Fraunces', serif;
+  display: none;
+  background: var(--light-color);
+  color: #fff;
+  padding: 0.4rem 1.3rem;
+  margin-block: clamp(1.3rem, 2vw, 1.8rem);
+  border: none;
+  border-radius: 0.3rem;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s all;
+  font-weight: bold;
+}
+
+.restart-btn:hover {
+  padding: 0.6rem 1.5rem;
+  color: var(--light-color);
+  background: var(--dark-color);
+  border: #fff 1px solid;
+  border-radius: 0.1rem;
+}
+
+.header {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.header h1 {
+  font-size: clamp(2.2rem, 2.5vw + 1rem, 5rem);
+  margin-bottom: 1rem;
+}
+
+.score {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 1.2rem;
+}
+
+.score p:first-child {
+  background: var(--light-color);
+  color: var(--dark-color);
+}
+
+.score p:last-child {
+  color: #fff;
+  border: 2px var(--light-color) solid;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: clamp(1.5rem, 2.5vw, 2rem);
+  text-align: center;
+}
+
+.choice {
+  transition: 0.1s all;
+  cursor: pointer;
+  font-size:clamp(5rem, 10vw, 45rem) ;
+}
+
+.choice:hover {
+  transform: scale(0.95) translateY(-0.5rem);
+}
+
+.text-win {
+  color: var(--win-color);
+}
+
+.text-lose {
+  color: var(--lose-color);
+}
